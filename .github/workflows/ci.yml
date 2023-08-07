@@ -36,7 +36,9 @@ jobs:
         run: |
           cp .env.ci .env
           php artisan key:generate
+          php artisan migrate
           php artisan migrate:status
-
+          php artisan db:seed
+          
       - name: Run Testsuite
         run: vendor/bin/phpunit tests/
