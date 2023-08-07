@@ -25,8 +25,11 @@ jobs:
 
       - name: Install composer dependencies
         run: |
-          composer install --no-scripts
-
+          composer install --ignore-platform-reqs
+          
+      - name: Update composer dependencies
+        run: |
+          composer update --ignore-platform-reqs
       - name: Prepare Laravel Application
         run: |
           cp .env.ci .env
