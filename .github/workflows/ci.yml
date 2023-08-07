@@ -6,7 +6,7 @@ jobs:
   phpunit:
     runs-on: ubuntu-latest
     container:
-      image: kirschbaumdevelopment/laravel-test-runner:7.3
+      image: kirschbaumdevelopment/laravel-test-runner:8.0
 
     services:
       mysql:
@@ -25,6 +25,8 @@ jobs:
 
       - name: Install composer dependencies
         run: 
+          echo "PHP version"
+          php -v
           composer install --ignore-platform-reqs
 
       - name: Update composer dependencies
