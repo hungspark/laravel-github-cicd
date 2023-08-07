@@ -39,6 +39,6 @@ jobs:
           php artisan migrate
           php artisan migrate:status
           php artisan db:seed
-          
+
       - name: Run Testsuite
-        run: vendor/bin/phpunit tests/
+        run: vendor/bin/phpunit --coverage-html tests/
