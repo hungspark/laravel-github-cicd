@@ -24,11 +24,11 @@ jobs:
           fetch-depth: 1
 
       - name: Install composer dependencies
-        run: |
+        run: 
           composer install --ignore-platform-reqs
-          
+
       - name: Update composer dependencies
-        run: |
+        run: 
           composer update --ignore-platform-reqs
       - name: Prepare Laravel Application
         run: |
